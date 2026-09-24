@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuclear Power Plants Worldwide</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="title-block">
+    <h1>Nuclear Power Plants Worldwide</h1>
+    <p id="subtitle">Loading plant data…</p>
+  </div>
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search plant or country…" autocomplete="off">
+    <div id="status-filters"></div>
+  </div>
+</header>
+<main>
+  <div id="map"></div>
+  <aside id="panel" class="hidden">
+    <button id="panel-close" aria-label="Close">×</button>
+    <div id="panel-body"></div>
+  </aside>
+</main>
+<footer>
+  <div id="legend"></div>
+  <div class="sources">
+    Data: Wikipedia “List of commercial nuclear reactors” (IAEA PRIS), Sep 2026 ·
+    Map: OpenStreetMap contributors · Built with Leaflet
+  </div>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
