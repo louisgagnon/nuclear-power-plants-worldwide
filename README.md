@@ -19,7 +19,7 @@ click for the full detail panel. Filter by status, or search by plant/country.
 | `plants.json` | All plant data incl. coordinates |
 | `README.md` | This file |
 
-No build step, no API keys. The page loads Leaflet from a CDN and `plants.json` locally.
+The page loads Leaflet from a CDN and `plants.json` locally.
 This is the flat-layout variant of the app, packaged so every file can be uploaded
 individually through GitHub's web upload (which doesn't accept folders). Functionally
 identical to the folder-based version.
@@ -31,8 +31,8 @@ identical to the folder-based version.
    then **Commit changes**.
 3. Go to **Settings → Pages** → under *Build and deployment*, set **Source** to
    **Deploy from a branch**, branch **main**, folder **/(root)** → Save.
-4. After a minute or two the site is live at
-   `https://<your-username>.github.io/<repo-name>/`.
+4. The site is live at
+   [`[https://<your-username>.github.io/<repo-name>/](https://louisgagnon.github.io/nuclear-power-plants-worldwide/)`](https://louisgagnon.github.io/nuclear-power-plants-worldwide/).
 
 ## Regenerating the data
 
