@@ -36,13 +36,18 @@ identical to the folder-based version.
 
 ## Regenerating the data
 
-The dataset pipeline lives alongside the spreadsheet build scripts:
+The dataset was built from Wikipedia's "List of commercial nuclear reactors"
+(compiling IAEA PRIS data, September 2026):
 
-- `extract_coords.py` — pulls `{{coord}}` lat/lng from each plant's Wikipedia article
-- `geocode_missing.py` — geocodes the rest via OpenStreetMap Nominatim
-- `build_app_data.py` — merges everything into the plants data file
+- Plant and reactor-unit records were parsed from the article's wikitext tables.
+- Owner, operator, annual generation, and capacity factor were parsed from each
+  plant's Wikipedia infobox.
+- Coordinates came from `{{coord}}` templates in each plant's article where
+  available; the rest were geocoded with OpenStreetMap Nominatim.
 
-Run in that order, then copy the fresh `plants.json` here (renamed from `data/plants.json`).
+The full build pipeline (Python scripts plus intermediate data files) is kept in
+a separate private repository for reference. Re-running it end to end re-hits
+the live Wikipedia API and Nominatim.
 
 ## Data notes
 
