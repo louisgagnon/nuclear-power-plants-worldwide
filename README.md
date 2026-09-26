@@ -24,15 +24,22 @@ This is the flat-layout variant of the app, packaged so every file can be upload
 individually through GitHub's web upload (which doesn't accept folders). Functionally
 identical to the folder-based version.
 
-## Publish with GitHub Pages (free)
+## Host your own copy with GitHub Pages (free)
 
-1. Create a new **public** repository on GitHub (e.g. `nuclear-power-plants-worldwide`).
-2. On the repo page click **Add file → Upload files** and drag in all five files above,
-   then **Commit changes**.
-3. Go to **Settings → Pages** → under *Build and deployment*, set **Source** to
+The app is a static site — no build step, no server. To publish your own copy:
+
+1. Fork this repository (or download the five files above) into a new **public**
+   repository on GitHub. (On a free GitHub account, Pages only publishes from
+   public repositories.)
+2. Go to **Settings → Pages** → under *Build and deployment*, set **Source** to
    **Deploy from a branch**, branch **main**, folder **/(root)** → Save.
-4. The site is live at
-   [`[https://<your-username>.github.io/<repo-name>/](https://louisgagnon.github.io/nuclear-power-plants-worldwide/)`](https://louisgagnon.github.io/nuclear-power-plants-worldwide/).
+3. Your site will be live at `https://<your-username>.github.io/<repo-name>/`
+   within a minute or two.
+
+To run it locally instead, serve the folder over HTTP
+(e.g. `python3 -m http.server`) and open the page in your browser —
+`plants.json` is loaded with `fetch`, so opening `index.html` straight from
+disk won't work in most browsers.
 
 ## Regenerating the data
 
